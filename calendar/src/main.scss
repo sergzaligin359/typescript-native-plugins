@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.calendar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table{
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+td, th{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000;
+}

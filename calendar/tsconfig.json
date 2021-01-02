@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "sourceMap": true,
+      "strict": true,
+      "noImplicitAny": false,
+      "strictPropertyInitialization": false,
+      "esModuleInterop": true,
+      "types": [],
+      //"strictNullChecks": true
+  },
+  "lib": [
+    "es6"
+  ],
+  "include": [
+    "src/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts",
+  ]
+}
