@@ -9,20 +9,18 @@ const currentMoment: moment.Moment = moment();
 const nextHandler = (e: Event, date: HTMLElement) => {
     console.log('click next');
     const momentjs = currentMoment.add(1, 'month');
-    // generate(momentjs);
-   // const date = document.querySelector('.calendar-header-date') as HTMLElement;
+    const tbody: HTMLElement = document.querySelector('.calendar-table tbody') as HTMLElement;
+    generate(momentjs, tbody);
     date.innerHTML = momentjs.format('MMMM YYYY');
 }
 
 const prevHandler = (e: Event, date: HTMLElement) => {
     console.log('click prev');
     const momentjs = currentMoment.add(-1, 'month');
-    // generate(momentjs);
-    // const date = document.querySelector('.calendar-header-date') as HTMLElement;
+    const tbody: HTMLElement = document.querySelector('.calendar-table tbody') as HTMLElement;
+    generate(momentjs, tbody);
     date.innerHTML = momentjs.format('MMMM YYYY');
 }
-
-
 
 const generate = (now: moment.Moment, tbody: HTMLElement) => {
 
@@ -98,7 +96,6 @@ const generate = (now: moment.Moment, tbody: HTMLElement) => {
     // tbody.append(div);
 }
 
-
 export default (selector: string) => {
 
     if(selector){
@@ -118,7 +115,6 @@ export default (selector: string) => {
         nextButton?.addEventListener('click', (e) => nextHandler(e, date));
 
         generate(currentMoment, tbody);
-        // console.log('prevButton, nextButton, date', prevButton, nextButton, date);
 
     }else{
         return null;
